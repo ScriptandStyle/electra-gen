@@ -73,7 +73,7 @@ function Footer() {
               <div className="contact-info">
                 <p><FaMapMarkerAlt /> Sri Eshwar College of Engineering, Kinathukadavu, Coimbatore</p>
                 <p><FaPhone /> +91 7845878331</p>
-                <p><FaEnvelope /> riti2005g@gmail.com</p>
+                <p><FaEnvelope /> electragen7@gmail.com</p>
               </div>
             </div>
 
