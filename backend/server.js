@@ -16,7 +16,12 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://electra-gen-scriptandstyles-projects.vercel.app/'],
+  origin: [
+    'http://localhost:3000', 
+    'https://electra-gen-scriptandstyles-projects.vercel.app',
+    'https://electra-gen.vercel.app', // Add your Vercel frontend domain
+    /\.vercel\.app$/ // This will allow all Vercel preview deployments
+  ],
   methods: ['GET', 'POST'],
   credentials: true
 }));
@@ -24,9 +29,10 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Ensure uploads directory exists
-const uploadsDir = path.join(__dirname, 'uploads', 'resumes');
-fs.mkdirSync(uploadsDir, { recursive: true }); // Create directory if it doesn't exist
+// TODO: Replace local file storage with cloud storage
+// This is just a temporary solution - files will be deleted after deployment
+const uploadsDir = '/tmp/uploads/resumes';
+fs.mkdirSync(uploadsDir, { recursive: true });
 
 app.use('/uploads', express.static(uploadsDir));
 
