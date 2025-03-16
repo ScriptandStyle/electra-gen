@@ -18,8 +18,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:3000', 
-    'https://electra-gen.vercel.app/',
-    'https://electra-gen.vercel.app' // if you have one
+    'https://electra-gen.vercel.app/' // if you have one
   ],
   methods: ['GET', 'POST'],
   credentials: true
