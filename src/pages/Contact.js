@@ -21,6 +21,7 @@ function Contact() {
   
     const handleSubmit = async (e) => {
       e.preventDefault();
+      setStatus(''); // Clear previous status
       
       if (!formData.name || !formData.email || !formData.message) {
         setStatus('Please fill in all required fields.');
@@ -28,12 +29,15 @@ function Contact() {
       }
   
       try {
+        // First check if the server is reachable
         const response = await fetch('http://localhost:5000/api/contact', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(formData)
+          body: JSON.stringify(formData),
+          // Add timeout to prevent long waiting
+          signal: AbortSignal.timeout(5000)
         });
   
         const data = await response.json();
@@ -46,7 +50,13 @@ function Contact() {
         }
       } catch (error) {
         console.error('Error:', error);
-        setStatus('Network error. Please check your connection.');
+        if (error.name === 'TimeoutError') {
+          setStatus('Server is not responding. Please try again later.');
+        } else if (error.name === 'TypeError' && error.message.includes('Failed to fetch')) {
+          setStatus('Unable to connect to the server. Please ensure the backend service is running.');
+        } else {
+          setStatus('An unexpected error occurred. Please try again later.');
+        }
       }
     };
   
