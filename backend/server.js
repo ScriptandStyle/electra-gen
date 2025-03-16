@@ -16,7 +16,11 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'your-production-domain.com'],
+  origin: [
+    'http://localhost:3000', 
+    'https://electra-gen.vercel.app/',
+    'https://electra-gen.vercel.app' // if you have one
+  ],
   methods: ['GET', 'POST'],
   credentials: true
 }));
@@ -31,12 +35,20 @@ fs.mkdirSync(uploadsDir, { recursive: true }); // Create directory if it doesn't
 app.use('/uploads', express.static(uploadsDir));
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('MongoDB Connected...'))
-  .catch(err => {
-    console.error('MongoDB connection error:', err);
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 5000,
+  retryWrites: true
+})
+.then(() => console.log('MongoDB Connected...'))
+.catch(err => {
+  console.error('MongoDB connection error:', err);
+  // Don't exit the process in production
+  if (process.env.NODE_ENV !== 'production') {
     process.exit(1);
-  });
+  }
+});
 
 // File Upload Configuration
 const storage = multer.diskStorage({
