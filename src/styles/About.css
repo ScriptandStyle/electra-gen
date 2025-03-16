@@ -1,0 +1,93 @@
+.about-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Subtract header height */
+    background-image: url('../images/img2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+}
+
+.about-content {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 900px;
+    width: 100%;
+    padding: 3rem;
+}
+
+.about-header {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.about-header h1 {
+    color: #1A3B5E;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-underline {
+    width: 100px;
+    height: 4px;
+    background-color: #4CAF50;
+}
+
+.about-subtitle {
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+.about-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.about-section {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.about-section h6 {
+    color: #1A3B5E;
+    margin-bottom: 1rem;
+}
+
+.company-name {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.about-highlights {
+    display: flex;
+    justify-content: space-around;
+    background-color: #F8F9FA;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.highlight {
+    text-align: center;
+}
+
+.highlight h3 {
+    color: #1A3B5E;
+    margin-bottom: 0.5rem;
+}
+
+.highlight p {
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    .about-details {
+        flex-direction: column;
+    }
+    
+    .about-section {
+        padding: 1rem 0;
+    }
+} 
