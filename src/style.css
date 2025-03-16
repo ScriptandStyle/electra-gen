@@ -3144,3 +3144,17 @@ body {
     font-size: 1.8rem;
   }
 }
+
+.btn.btn-secondary {
+  background: transparent;
+  border: 2px solid #0d1ad1;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn.btn-secondary:hover {
+  background: #5648d1e8;
+  color: #f8f8f8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
