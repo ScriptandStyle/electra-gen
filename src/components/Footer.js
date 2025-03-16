@@ -41,7 +41,6 @@ function Footer() {
               <p>Innovative solutions for a sustainable future. Transforming energy landscapes with cutting-edge technology and commitment to environmental excellence.</p>
               <div className="social-links">
                 <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-                <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
                 <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
               </div>
@@ -54,15 +53,15 @@ function Footer() {
                 <div>
                   <ul>
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/#about">About Us</Link></li>
-                    <li><Link to="/#service">Services</Link></li>
+                    <li><Link to="/about">About Us</Link></li>
+                    <li><Link to="/service">Services</Link></li>
                   </ul>
                 </div>
                 <div>
                   <ul>
-                    <li><Link to="/#portfolio">Portfolio</Link></li>
+                    <li><Link to="/portfolio">Portfolio</Link></li>
                     <li><Link to="/join-us">Join Us</Link></li>
-                    <li><Link to="/#contact">Contact</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                   </ul>
                 </div>
               </div>
