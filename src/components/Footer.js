@@ -40,9 +40,8 @@ function Footer() {
               <h3>Electragen</h3>
               <p>Innovative solutions for a sustainable future. Transforming energy landscapes with cutting-edge technology and commitment to environmental excellence.</p>
               <div className="social-links">
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                <a href="https://www.linkedin.com/company/electra-gen/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                <a href="https://www.instagram.com/electragen_official/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
               </div>
             </div>
 

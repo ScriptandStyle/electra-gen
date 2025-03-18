@@ -10,7 +10,7 @@ function About() {
         {
             id: 1,
             name: "Rittish G", 
-            role: "Team Lead | Sustainable Energy",
+            role: "Founder | Team Lead | Sustainable Energy",
             img: "./images/rittish.jpg",
             bio: "A visionary leader transforming sustainable energy landscapes through innovative technology and strategic leadership.",
             skills: ["Project Management", "React", "Energy Optimization", "Strategic Planning"],
@@ -19,16 +19,16 @@ function About() {
                 "Developed innovative energy management platforms",
                 "Speaker at Global Energy Innovation Summit"
             ],
-            email: "rittish.g@electragen.com",
+            email: "riti2005g@gmail.com",
             socialLinks: {
-                linkedin: "https://linkedin.com/in/rittish",
+                linkedin: "https://www.linkedin.com/in/rittish-g-a89752282/",
                 github: "https://github.com/rittish"
             }
         },
         {
             id: 2,
             name: "Bharath Kishore T", 
-            role: "Web Developer | Energy Analyst",
+            role: "Co-Founder | Web Developer | Energy Analyst",
             img: "./images/bharath.jpg",
             bio: "Innovative developer creating cutting-edge web solutions for sustainable energy ecosystems.",
             skills: ["React", "Node.js", "Energy Analytics", "Cloud Computing"],
@@ -37,16 +37,16 @@ function About() {
                 "Implemented machine learning models for energy prediction",
                 "Open-source contributor to green tech projects"
             ],
-            email: "bharath.k@electragen.com",
+            email: "bharath701031@gmail.com",
             socialLinks: {
-                linkedin: "https://linkedin.com/in/bharath",
+                linkedin: "https://www.linkedin.com/in/bharath-kishore-80420a2bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
                 github: "https://github.com/bharath"
             }
         },
         {
             id: 3,
             name: "Santhossh KG", 
-            role: "UI/UX Designer | Innovation Architect",
+            role: "Cheif Operations Officer | UI/UX Designer | Innovation Architect",
             img: "./images/santhossh.jpg",
             bio: "Design visionary transforming complex ideas into intuitive, impactful user experiences.",
             skills: ["UI/UX Design", "React Native", "Design Thinking", "User Experience"],
@@ -55,16 +55,16 @@ function About() {
                 "Created intuitive interfaces for complex systems",
                 "Keynote speaker on design innovation"
             ],
-            email: "santhossh.kg@electragen.com",
+            email: "kgsanthossh2307@gmail.com",
             socialLinks: {
-                linkedin: "https://linkedin.com/in/santhossh",
+                linkedin: "https://www.linkedin.com/in/santhossh-k-g-a0bb47349/",
                 github: "https://github.com/santhossh"
             }
         },
         {
             id: 4,
             name: "Yeswanth S", 
-            role: "FullStack Developer | Cloud Architect",
+            role: "Cheif Technology Officer | FullStack Developer",
             img: "./images/Yeswanth.jpg",
             bio: "Technical maestro specializing in end-to-end software solutions for next-generation energy technologies.",
             skills: ["Full Stack Development", "Cloud Computing", "DevOps", "Microservices"],

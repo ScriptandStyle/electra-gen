@@ -20,7 +20,7 @@ function Services() {
             </div>
             
             <div className="service-item">
-              <span className="icon"><i className="fa fa-android"></i></span>
+              <span className="icon"><i className="fa fa-mobile"></i></span>
               <h6>Tech Solutions</h6>
               <p>We Have Expertise In Creating Multi-Platform Mobile App Solutions For Both Android And IOS Devices. Using PhoneGap, Xamarin, And React Native, We Offer Custom Mobile App That Runs Smoothly On Multiple Platforms.</p>
             </div>

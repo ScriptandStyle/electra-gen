@@ -18,32 +18,27 @@ import '../style.css';
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    // Apply dark mode preference
-    document.body.classList.toggle('dark-mode', isDarkMode);
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isDarkMode]);
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = !isMobileMenuOpen ? 'hidden' : 'visible';
   };
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-  };
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+    document.body.style.overflow = 'visible';
   };
 
   const navLinks = [
@@ -56,9 +51,10 @@ function Header() {
   ];
 
   return (
-    <header className={`advanced-header ${isScrolled ? 'scrolled' : ''} ${isDarkMode ? 'dark-mode' : ''}`}>
+    <header className={`advanced-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
-        <div className="logo-container">
+        {/* Logo Section */}
+        <div className="header-logo-section">
           <Link to="/" className="logo-link">
             <img 
               src={Logo} 
@@ -68,38 +64,47 @@ function Header() {
           </Link>
         </div>
 
-        <nav className={`nav-menu ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-          <div className="nav-links">
-            {navLinks.map((link, index) => (
-              <Link 
-                key={index} 
-                to={link.to} 
-                className={`nav-link ${link.className || ''}`} 
-                onClick={closeMobileMenu}
-              >
-                {link.icon}
-                <span>{link.label}</span>
-              </Link>
-            ))}
-          </div>
-        </nav>
-
-        <div className="header-actions">
-          <div 
-            className="dark-mode-toggle" 
-            onClick={toggleDarkMode}
-            title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-          >
-            {isDarkMode ? <FaSun /> : <FaMoon />}
-          </div>
-
-          <div 
-            className="mobile-menu-toggle" 
-            onClick={toggleMobileMenu}
-          >
-            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-          </div>
+        {/* Desktop Navigation */}
+        <div className="header-nav-section">
+          <nav className="nav-menu">
+            <div className="nav-links">
+              {navLinks.map((link, index) => (
+                <Link 
+                  key={index} 
+                  to={link.to} 
+                  className={`nav-link ${link.className || ''}`}
+                >
+                  {link.icon}
+                  <span>{link.label}</span>
+                </Link>
+              ))}
+            </div>
+          </nav>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button 
+          className="mobile-menu-toggle"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
+        >
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+      {/* Mobile Navigation Menu */}
+      <div className={`mobile-nav ${isMobileMenuOpen ? 'show' : ''}`}>
+        {navLinks.map((link, index) => (
+          <Link 
+            key={index} 
+            to={link.to} 
+            className={`mobile-nav-link ${link.className || ''}`}
+            onClick={closeMobileMenu}
+          >
+            {link.icon}
+            <span>{link.label}</span>
+          </Link>
+        ))}
       </div>
     </header>
   );
