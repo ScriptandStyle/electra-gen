@@ -3504,3 +3504,44 @@ body.menu-open {
         transform: translateY(0);
     }
 }
+
+/* Team Member Achievement Styles */
+.member-overlay .overlay-content {
+    padding: 20px;
+    color: white;
+}
+
+.member-overlay .overlay-content h4 {
+    font-size: 20px;  /* Increased from default */
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.member-overlay .overlay-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.member-overlay .overlay-content li {
+    font-size: 14px;  /* Increased from default */
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.member-overlay .overlay-content li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 20px;  /* Increased checkmark size */
+}
+
+/* Hover effect for better readability */
+.member-overlay:hover .overlay-content {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}

@@ -11,7 +11,7 @@ function About() {
             id: 1,
             name: "Rittish G", 
             role: "Founder | Team Lead | Sustainable Energy",
-            img: "./images/rittish.jpg",
+            img: "/images/rittish.jpg",
             bio: "A visionary leader transforming sustainable energy landscapes through innovative technology and strategic leadership.",
             skills: ["Project Management", "React", "Energy Optimization", "Strategic Planning"],
             achievements: [
@@ -29,7 +29,7 @@ function About() {
             id: 2,
             name: "Bharath Kishore T", 
             role: "Co-Founder | Web Developer | Energy Analyst",
-            img: "./images/bharath.jpg",
+            img: "/images/bharath.jpg",
             bio: "Innovative developer creating cutting-edge web solutions for sustainable energy ecosystems.",
             skills: ["React", "Node.js", "Energy Analytics", "Cloud Computing"],
             achievements: [
@@ -47,7 +47,7 @@ function About() {
             id: 3,
             name: "Santhossh KG", 
             role: "Cheif Operations Officer | UI/UX Designer | Innovation Architect",
-            img: "./images/santhossh.jpg",
+            img: "/images/santhossh.jpg",
             bio: "Design visionary transforming complex ideas into intuitive, impactful user experiences.",
             skills: ["UI/UX Design", "React Native", "Design Thinking", "User Experience"],
             achievements: [
@@ -65,7 +65,7 @@ function About() {
             id: 4,
             name: "Yeswanth S", 
             role: "Cheif Technology Officer | FullStack Developer",
-            img: "./images/Yeswanth.jpg",
+            img: "/images/Yeswanth.jpg",
             bio: "Technical maestro specializing in end-to-end software solutions for next-generation energy technologies.",
             skills: ["Full Stack Development", "Cloud Computing", "DevOps", "Microservices"],
             achievements: [
