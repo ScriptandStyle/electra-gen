@@ -8,9 +8,7 @@ import {
   FaCog, 
   FaImage, 
   FaEnvelope, 
-  FaUserPlus, 
-  FaMoon, 
-  FaSun 
+  FaUserPlus 
 } from 'react-icons/fa';
 import Logo from '../images/logo.png'; // Import the logo image
 import '../style.css';

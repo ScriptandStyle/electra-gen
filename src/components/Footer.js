@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaPhone,FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 function Footer() {
     const [email, setEmail] = useState('');
