@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../style.css';
+
 function Services() {
     return (
       <>
@@ -13,11 +15,13 @@ function Services() {
             <p>To revolutionize energy generation and distribution by providing sustainable, efficient, and reliable solutions tailored to meet the evolving needs of our customers.</p>
           </div>
           <div className="services-container">
-            <div className="service-item">
-              <span className="icon"><i className="fa fa-laptop"></i></span>
-              <h6>Sustainable devices</h6>
-              <p>We design energy meters, smart monitoring systems, and groundbreaking sand energy solutions. Our devices redefine efficiency and sustainability, driving a future powered by innovation and responsibility. Heading to solve world's major problem.</p>
-            </div>
+            <Link to="https://shore-rffu.vercel.app/" className="service-item-link">
+              <div className="service-item">
+                <span className="icon"><i className="fa fa-laptop"></i></span>
+                <h6>Sustainable devices</h6>
+                <p>We design energy meters, smart monitoring systems, and groundbreaking sand energy solutions. Our devices redefine efficiency and sustainability, driving a future powered by innovation and responsibility. Heading to solve world's major problem.</p>
+              </div>
+            </Link>
             
             <div className="service-item">
               <span className="icon"><i className="fa fa-mobile"></i></span>

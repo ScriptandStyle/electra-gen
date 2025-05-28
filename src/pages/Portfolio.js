@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../style.css';
@@ -14,8 +15,10 @@ return (
 <div className="projects-container">
 <div className="project-item">
 <span className="icon"><i className="fa fa-database"></i></span>
+<Link to="https://shore-rffu.vercel.app/" className="service-item-link">
 <h6>Shore Energy</h6>
 <p>Generation of electricity by using river sand, harnessing natural resources for sustainable power solutions.</p>
+</Link>
 </div>
 
 <div className="project-item">

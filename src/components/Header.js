@@ -43,7 +43,7 @@ function Header() {
     { to: '/', label: 'Home', icon: <FaHome /> },
     { to: '/about', label: 'About', icon: <FaInfoCircle /> },
     { to: '/services', label: 'Services', icon: <FaCog /> },
-    { to: '/portfolio', label: 'Portfolio', icon: <FaImage /> },
+    { to: '/portfolio', label: 'Projects', icon: <FaImage /> },
     { to: '/contact', label: 'Contact', icon: <FaEnvelope /> },
     { to: '/join-us', label: 'Join Us', icon: <FaUserPlus />, className: 'nav-cta' }
   ];

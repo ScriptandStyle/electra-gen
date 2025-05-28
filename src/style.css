@@ -3545,3 +3545,35 @@ body.menu-open {
     transform: scale(1.02);
     transition: transform 0.3s ease;
 }
+
+/* Service item link styling */
+.service-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.service-item-link:hover {
+    transform: translateY(-5px);
+}
+
+.service-item-link .service-item {
+    cursor: pointer;
+    position: relative;
+}
+
+.service-item-link .service-item::after {
+    content: "Learn more →";
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 14px;
+    color: #3498db;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-item-link:hover .service-item::after {
+    opacity: 1;
+}
